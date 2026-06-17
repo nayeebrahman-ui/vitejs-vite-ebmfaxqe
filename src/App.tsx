@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, Dispatch, SetStateAction } from "react";
-import type { MouseEvent as ReactMouseEvent } from "react";
+import { useState, useEffect, useRef } from "react";
+import type { Dispatch, SetStateAction, MouseEvent as ReactMouseEvent } from "react";
 import {
   ArrowUpRight, Award, CheckCircle2, ChevronDown,
   Globe, Mail, MapPin, MessageCircle,
