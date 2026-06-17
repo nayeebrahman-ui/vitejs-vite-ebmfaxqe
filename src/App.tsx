@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import type { Dispatch, SetStateAction, MouseEvent as ReactMouseEvent } from "react";
+import type { MouseEvent as ReactMouseEvent } from "react";
 import {
   ArrowUpRight, Award, CheckCircle2, ChevronDown,
   Globe, Mail, MapPin, MessageCircle,
@@ -454,7 +454,7 @@ const useScrollY = () => {
 const Nav = ({ scrollY, theme, setTheme }: {
   scrollY: number;
   theme: "dark" | "light";
-  setTheme: Dispatch<SetStateAction<"dark" | "light">>;
+  setTheme: (v: "dark" | "light" | ((p: "dark" | "light") => "dark" | "light")) => void;
 }) => {
   const past = scrollY > 80;
   return (
